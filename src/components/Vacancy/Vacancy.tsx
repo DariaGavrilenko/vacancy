@@ -29,7 +29,7 @@ type VacancyDetailType = {
 }
 
 const Vacancy = ({ changeFavoriteStatus }: VacancyPropsType) => {
-
+    const [isLoading, setLoading] = useState(false)
     const [vacancy, setVacancy] = useState<VacancyDetailType>({
         id: '',
         firm_name: '',
@@ -55,6 +55,7 @@ const Vacancy = ({ changeFavoriteStatus }: VacancyPropsType) => {
     }
 
     useEffect(() => {
+        setLoading(true)
         fetch(`https://startup-summer-2023-proxy.onrender.com/2.0/vacancies/${id}`, {
             headers: {
                 "x-secret-key": 'GEU4nvd3rej*jeh.eqp',
@@ -67,28 +68,38 @@ const Vacancy = ({ changeFavoriteStatus }: VacancyPropsType) => {
                 const nextFavorites = favorites ? JSON.parse(favorites) : []
                 const isFavorite = nextFavorites.some((item: VacancyType) => item.id === response.id)
                 setVacancy({ ...response, isFavorite })
+                setLoading(false)
             })
     }, [])
 
 
     return (
-        <div className={s.vacancyPageContainer}>
-            <div className={s.vacancyContainer}>
-                <div className={s.vacancyHeaderContainer}>
-                    <h1 className={s.vacancy}>{vacancy.profession}</h1>
-                    <FavoriteButton vacancyId={vacancy.id} isFavorite={vacancy.isFavorite} setIsFavorite={setIsFavorite} />
-                </div>
-                <span className={s.salary}>
-                    {getSalary(+vacancy.payment_from, +vacancy.payment_to, vacancy.currency)}
-                </span>
-                <span className={s.schedule}> • {vacancy.type_of_work.title}</span>
-                <span className={s.location}>
-                    <img src={location} alt="location" className={s.icon} />
-                    {vacancy.town.title}</span>
-            </div>
-            <div className={s.detailsContainer}
-                dangerouslySetInnerHTML={{ __html: vacancy.vacancyRichText }} ></div>
-        </div>
+        <>
+            {isLoading ?
+                <div>Loading</div>
+                : <div className={s.vacancyPageContainer}>
+                    <div className={s.vacancyContainer}>
+                        <div className={s.vacancyHeaderContainer}>
+                            <h1 className={s.vacancy}>{vacancy.profession}</h1>
+                            <FavoriteButton vacancyId={vacancy.id} isFavorite={vacancy.isFavorite} setIsFavorite={setIsFavorite} />
+                        </div>
+                        <span className={s.salary}>
+                            {getSalary(+vacancy.payment_from, +vacancy.payment_to, vacancy.currency)}
+                        </span>
+                        <span className={s.schedule}> • {vacancy.type_of_work.title}</span>
+                        <span className={s.location}>
+                            <img src={location} alt="location" className={s.icon} />
+                            {vacancy.town.title}
+                        </span>
+                    </div>
+                    <div className={s.detailsContainer}
+                        dangerouslySetInnerHTML={{ __html: vacancy.vacancyRichText }} >
+
+                    </div>
+                </div>}
+        </>
+
+
     )
 }
 

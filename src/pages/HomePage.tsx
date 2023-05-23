@@ -11,12 +11,13 @@ export type SearchParamsType = {
 }
 
 type HomePagePropsType = {
+    isLoading: boolean
     vacancies: VacancyType[]
     getSearchParams: (obj: SearchParamsType) => void
     changeFavoriteStatus: (id: string, isFavorite: boolean) => void
 }
 
-const HomePage = ({ vacancies, getSearchParams, changeFavoriteStatus }: HomePagePropsType) => {
+const HomePage = ({ vacancies, getSearchParams, changeFavoriteStatus, isLoading }: HomePagePropsType) => {
 
     return (
         <div style={{
@@ -29,10 +30,11 @@ const HomePage = ({ vacancies, getSearchParams, changeFavoriteStatus }: HomePage
                 getSearchParams={getSearchParams}
             />
             <Main vacancies={vacancies}
+                isLoading={isLoading}
                 getSearchParams={getSearchParams}
                 changeFavoriteStatus={changeFavoriteStatus}
             />
-     
+
         </div>
     )
 }
