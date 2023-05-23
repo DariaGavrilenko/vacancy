@@ -1,0 +1,108 @@
+.vacancyPageContainer {
+    margin: 0 auto;
+    max-width: 773px;
+}
+
+.vacancyContainer {
+    max-width: 773px;
+    background: #FFFFFF;
+    border: 1px solid var(--grey-200);
+    border-radius: 12px;
+    color: var(--black);
+    font-style: normal;
+    text-align: start;
+    padding: 24px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.vacancyHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vacancy {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: var(--black);
+    margin-bottom: 16px;
+    max-width: 600px;
+}
+
+.schedule {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.salary {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 13px;
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    width: 773px;
+    background: #FFFFFF;
+    border: 1px solid var(--grey-200);
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-align: start;
+    margin-bottom: 51px;
+}
+
+.detailsContainer b{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--black);
+    margin-bottom: 16px;  
+}
+
+
+.detailsTitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
+.detailsItem {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--black);
+    margin-left: 24px;
+}
+
+.detailsList{
+    margin-bottom: 20px;
+}
+
+.detailsList:last-child{
+    margin-bottom: 0;
+}
+
+.icon {
+    margin-right: 8px;
+}

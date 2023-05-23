@@ -1,0 +1,118 @@
+.mainContainer {
+    width: 773px;
+}
+
+.searchInput {
+    border: 1px solid var(--grey-200);
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.searchButton {
+    width: 83px;
+    height: 32px;
+    background: var(--blue-500);
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.vacancyContainer {
+    max-width: 773px;
+    background: #FFFFFF;
+    border: 1px solid var(--grey-200);
+    border-radius: 12px;
+    color: var(--black);
+    font-style: normal;
+    text-align: start;
+    padding: 24px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.vacancyHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vacancy {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--blue-500);
+    margin-bottom: 12px;
+    max-width: 600px;
+}
+
+.schedule {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.salary {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 13px;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+.paginateContainer {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.pageLink {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--black);
+}
+
+.page,
+.pageButton {
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid var(--grey-300);
+    border-radius: 4px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.disable {
+    background: #FFFFFF;
+    border: 1px solid var(--grey-200);
+    border-radius: 4px;
+    color: var(--grey-300);
+}
+
+.activePage {
+    background: var(--blue-500);
+    border: 1px solid var(--blue-500);
+    border-radius: 4px;
+}

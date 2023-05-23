@@ -1,0 +1,51 @@
+.headerMainContainer {
+    height: 84px;
+    background-color: white;
+    margin-bottom: 40px;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1116px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.headerLink {
+    margin-right: 60px;
+    color: var(--black);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.headerLink:hover {
+    color: var(--blue-400);
+    font-weight: 500;
+}
+
+.headerLink:active {
+    color: var(--blue-500);
+    font-weight: 500;
+}
+
+.headerLink:last-child {
+    margin: 0;
+}
+
+.logoContainer {
+    margin-right: 280px;
+}
+
+@media screen and (max-width: 625px) {
+    .headerContainer {
+        justify-content: space-between;
+    }
+
+    .logoContainer {
+        margin-right: 0px;
+    }
+}
