@@ -39,14 +39,14 @@ export const Main = ({ vacancies, getSearchParams, changeFavoriteStatus }: MainP
     return (
         <div className={s.mainContainer}>
             <TextInput
-            data-elem={'search-input'}
+            data-elem="search-input"
                 icon={<IconSearch size="1.1rem" stroke={1.5} />}
                 size="md"
                 placeholder="Введите название вакансии"
                 rightSectionWidth={95}
                 rightSection={
                     <button
-                   data-elem={'search-button'}
+                   data-elem="search-button"
                         className={s.searchButton}
                         onClick={onSearchHeandler}>
                         Поиск

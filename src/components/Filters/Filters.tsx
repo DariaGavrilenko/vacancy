@@ -59,7 +59,7 @@ export const Filters = ({ getSearchParams }: FiltersPropsType) => {
             </div>
             <h2 className={s.filtersTitle}>Отрасль</h2>
             <Select
-                data-elem={'industry-select'}
+                data-elem="industry-select"
                 mt="md"
                 value={selectItem}
                 data={[...catalogues.map(el => ({ label: el.title_rus, value: el.title_rus }))]}
@@ -75,7 +75,7 @@ export const Filters = ({ getSearchParams }: FiltersPropsType) => {
             />
             <h2 className={s.filtersTitle}>Оклад</h2>
             <TextInput
-                data-elem={'salary-from-input'}
+                data-elem="salary-from-input"
                 type="number"
                 placeholder="От"
                 className={s.input}
@@ -83,7 +83,7 @@ export const Filters = ({ getSearchParams }: FiltersPropsType) => {
                 onChange={(e) => setPaymentFrom(e.currentTarget.value)}
             />
             <TextInput
-              data-elem={'salary-to-input'}
+              data-elem="salary-to-input"
                 type="number"
                 placeholder="До"
                 className={s.input}
@@ -92,7 +92,7 @@ export const Filters = ({ getSearchParams }: FiltersPropsType) => {
             />
             <button className={s.filtersSubmitButton}
                 onClick={onAcceptClick}
-                data-elem = {'search-button'}
+                data-elem = "search-button"
             >Применить
             </button>
 
